@@ -6,11 +6,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@SpringBootApplication // Spring BootÏîÄ¿µÄºËĞÄ×¢½â£¬Ö÷ÒªÄ¿µÄÊÇ¿ªÆô×Ô¶¯ÅäÖÃ
+@SpringBootApplication // Spring Booté¡¹ç›®çš„æ ¸å¿ƒæ³¨è§£ï¼Œä¸»è¦ç›®çš„æ˜¯å¼€å¯è‡ªåŠ¨é…ç½®
 public class SpringbootMainApplication {
 
-	// ÔÚmain·½·¨ÖĞÆô¶¯Ò»¸öÓ¦ÓÃ£¬¼´£ºÕâ¸öÓ¦ÓÃµÄÈë¿Ú
+	// åœ¨mainæ–¹æ³•ä¸­å¯åŠ¨ä¸€ä¸ªåº”ç”¨ï¼Œå³ï¼šè¿™ä¸ªåº”ç”¨çš„å…¥å£
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootMainApplication.class, args);
+//		SpringApplication app = new SpringApplication(SpringbootMainApplication.class);
+//		app.setBannerMode(Banner.Mode.OFF);// å…³é—­banner
+//		app.run(args);
 	}
 }

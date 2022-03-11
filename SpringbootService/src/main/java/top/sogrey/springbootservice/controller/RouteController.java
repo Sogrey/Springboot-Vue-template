@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller // ±êÃ÷ÕâÊÇÒ»¸öSpringMVCµÄController¿ØÖÆÆ÷
+@Controller // æ ‡æ˜Žè¿™æ˜¯ä¸€ä¸ªSpringMVCçš„ControlleræŽ§åˆ¶å™¨
 @RequestMapping(value = "/api")
 public class RouteController {
 	@RequestMapping("/")
