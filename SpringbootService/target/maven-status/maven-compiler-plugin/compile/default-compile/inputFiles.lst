@@ -1,3 +1,10 @@
 G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\SpringbootMainApplication.java
+G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\dao\exceptions\BaseMapperException.java
+G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\model\AppUser.java
+G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\model\BaseResult.java
 G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\controller\DBController.java
+G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\dao\UserMapper.java
+G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\model\UserListResult.java
 G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\controller\RouteController.java
+G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\controller\UserController.java
+G:\workspace\java\Springboot-Vue-template\SpringbootService\src\main\java\top\sogrey\springbootservice\model\UserResult.java
