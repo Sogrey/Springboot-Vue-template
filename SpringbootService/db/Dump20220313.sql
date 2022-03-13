@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `appuser`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `appuser` (
-  `idappuser` int NOT NULL,
+  `id` int NOT NULL,
   `userName` varchar(45) DEFAULT NULL,
-  `age` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idappuser`)
+  `age` int DEFAULT '18',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,7 +36,7 @@ CREATE TABLE `appuser` (
 
 LOCK TABLES `appuser` WRITE;
 /*!40000 ALTER TABLE `appuser` DISABLE KEYS */;
-INSERT INTO `appuser` VALUES (1,'Jim','16'),(2,'Kate','15'),(3,'Green','16');
+INSERT INTO `appuser` VALUES (1,'Jim',16),(2,'Kate',15),(3,'Green',16);
 /*!40000 ALTER TABLE `appuser` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-12  2:56:54
+-- Dump completed on 2022-03-13  1:32:24
