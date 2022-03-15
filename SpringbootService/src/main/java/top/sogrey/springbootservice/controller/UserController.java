@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import top.sogrey.springbootservice.dao.UserMapper;
 import top.sogrey.springbootservice.model.AppUser;
-import top.sogrey.springbootservice.model.BaseResult;
-import top.sogrey.springbootservice.model.UserListResult;
-import top.sogrey.springbootservice.model.UserResult;
+import top.sogrey.springbootservice.model.response.BaseResult;
+import top.sogrey.springbootservice.model.response.StandardResult;
 
 @RestController
 @RequestMapping("/user")
@@ -30,18 +29,25 @@ public class UserController {
 	 */
 	@RequestMapping(value = "/insert", method = RequestMethod.GET)
 	public BaseResult insert() {
-		AppUser user = new AppUser();
-		user.setId(createRandomInt(1000, 9999));
-		user.setUserName(createRandomStr(8));
-		user.setAge(createRandomInt(10, 120));
-		userMapper.insert(user);
-		return new BaseResult(0, "操作成功。");
+		try {
+			AppUser user = new AppUser();
+			user.setId(createRandomInt(1000, 9999));
+			user.setUserName(createRandomStr(8));
+			user.setAge(createRandomInt(10, 120));
+			userMapper.insert(user);
+			StandardResult<AppUser> result = new StandardResult<AppUser>(0, "insert:操作成功。");
+			result.setData(user);
+			return result;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new BaseResult(1, "操作失败:" + e.getMessage());
+		}
 	}
 
 	/**
 	 * 查询数据
 	 * 
-	 * @example http://localhost:10111/user/queryById?id=5838
+	 * @example http://localhost:10111/user/queryById?id=1
 	 * 
 	 * @param id
 	 * @return
@@ -50,14 +56,14 @@ public class UserController {
 	public BaseResult queryById(@RequestParam("id") int id) {
 		try {
 			AppUser user = userMapper.selectById(id);
-			UserResult userResult = new UserResult(0, "queryById:查询成功。");
-			userResult.setAppUser(user);
-			return userResult;
+
+			StandardResult<AppUser> result = new StandardResult<AppUser>(0, "queryById:查询成功。");
+			result.setData(user);
+			return result;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return new BaseResult(1, "操作失败:" + e.getMessage());
 		}
-
 	}
 
 	/**
@@ -72,15 +78,13 @@ public class UserController {
 	public BaseResult queryAll() {
 		try {
 			List<AppUser> allUsers = userMapper.selectList(null);
-
-			UserListResult userListResult = new UserListResult(0, "queryAll:查询成功。");
-			userListResult.setAppUsers(allUsers);
-			return userListResult;
+			StandardResult<AppUser> result = new StandardResult<AppUser>(0, "queryAll:查询成功。");
+			result.setDatas(allUsers);
+			return result;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return new BaseResult(1, "操作失败:" + e.getMessage());
 		}
-
 	}
 
 	/**

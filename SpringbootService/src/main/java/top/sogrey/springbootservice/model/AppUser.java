@@ -1,7 +1,7 @@
 package top.sogrey.springbootservice.model;
 
 import com.baomidou.mybatisplus.annotations.TableName;
-import com.baomidou.mybatisplus.annotations.TableField;;
+import com.baomidou.mybatisplus.annotations.TableField;
 
 
 @TableName(value = "appuser")

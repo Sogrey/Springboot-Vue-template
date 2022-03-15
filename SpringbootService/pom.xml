@@ -19,6 +19,16 @@
 		<version>1.5.6.RELEASE</version>
 	</parent>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
 		<!-- 核心模块，包括自动配置支持、日志和YAML -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -30,11 +40,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>

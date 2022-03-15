@@ -1,7 +1,13 @@
-package top.sogrey.springbootservice.model;
+package top.sogrey.springbootservice.model.response;
 
 public class BaseResult {
-	private int code = 0;
+	/*
+	 * 0 成功 1失敗
+	 */
+	private int code = 0; 
+	/**
+	 * 失敗原因
+	 */
 	private String message = "";
 
 	public BaseResult(int code, String message) {
